@@ -1,0 +1,73 @@
+.list {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin: 0 0 10px;
+}
+
+.list__block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px 20px;
+  border-style: solid;
+  border-width: 0 0 1px;
+  border-color: #dddddd;
+  justify-content: space-between;
+}
+
+.list__button {
+  flex-basis: 10%;
+}
+
+.list__item {
+  flex-basis: 75%;
+}
+
+.list__markButton {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(120, 100%, 40%);
+  border-style: solid;
+  border-width: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.list__binButton {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-style: solid;
+  border-width: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.list__leftParagraph {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list__rightParagraph {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list__content {
+  display: flex;
+  justify-content: center;
+  word-break: break-word;
+  font-style: normal;
+}
+
+.list__content--done {
+  text-decoration: line-through;
+}

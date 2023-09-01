@@ -1,0 +1,12 @@
+.flex {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.flex__header {
+    display: flex;
+    background-color: #ffffff;
+    padding: 0 20px;
+    margin: 0 0 2px;
+}
