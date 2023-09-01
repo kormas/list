@@ -7,4 +7,4 @@ https://kormas.github.io/list/
 The list allows you to:
 - creating new tasks
 - marking tasks
-- deleting task
+- deleting tasks
