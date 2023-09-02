@@ -53,7 +53,7 @@
             <li class="list__block">
                     <div class="list__button">
                         <p class="list__leftParagraph ">
-                            <button class="list__markButton js-done">${task.done ? "✅" : ""}</button>
+                            <button class="list__markButton js-done">${task.done ? "✓" : ""}</button>
                         </p>
                     </div>
                     <div class="list__item">
