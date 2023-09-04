@@ -1,5 +1,5 @@
 {
-    const tasks = [
+    let tasks = [
         {
             content: "przykład nr 1",
             done: false,
@@ -11,33 +11,40 @@
     ];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent, done: false }
+        ];
         render();
     };
 
     const toggleTaskDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+        const task = tasks[index];
+        tasks = [
+            ...tasks.slice(0, index),
+            { ...task, done: !task.done },
+            ...tasks.slice(index + 1)
+        ];
         render();
     };
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1)
+        ];
         render();
     };
 
     const bindEvents = () => {
-        const toggleDoneButtons = document.querySelectorAll(".js-done")
-
+        const toggleDoneButtons = document.querySelectorAll(".js-done");
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(index);
             });
         });
 
-        const removeButtons = document.querySelectorAll(".js-remove")
-
+        const removeButtons = document.querySelectorAll(".js-remove");
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
                 removeTask(index);
@@ -50,15 +57,14 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="list__block">
+                <li class="list__block">
                     <div class="list__button">
-                        <p class="list__leftParagraph ">
+                        <p class="list__leftParagraph">
                             <button class="list__markButton js-done">${task.done ? "✓" : ""}</button>
                         </p>
                     </div>
                     <div class="list__item">
-                        <p class="list__content ${task.done ? "list__content--done" : ""}" 
-                        >
+                        <p class="list__content ${task.done ? "list__content--done" : ""}">
                             ${task.content}
                         </p>
                     </div>
@@ -69,34 +75,29 @@
                     </div>
                 </li>
             `;
-        };
+        }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
         bindEvents();
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
         const newTaskElement = document.querySelector(".js-newTask");
 
         if (newTaskContent === "") {
             return;
-        };
+        }
 
         addNewTask(newTaskContent);
-
         newTaskElement.value = "";
         newTaskElement.focus();
     };
 
     const init = () => {
         render();
-
-        const form = document.querySelector(".js-form")
-
+        const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
     };
 
