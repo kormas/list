@@ -8,27 +8,32 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.flex__block {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 0 2px;
+}
+
 .flex__header {
     display: flex;
     flex-grow: 1;
     background-color: #ffffff;
     padding: 0 20px;
-    margin: 0 0 2px;
 }
 
-.flex__block {
+.flex__buttonContainer {
     display: flex;
-    flex-wrap: nowrap;
 }
 
 .flex__button {
     background: #ffffff;
     border: none;
     outline: none;
-    padding: 0 20px;
-    margin: 0 0 2px;
+    /* padding: 0 20px; */
+    /* margin: 0 0 2px; */
     color: teal;
     cursor: pointer;
+    height: 100%;
 }
 
 .flex__button--hidden {
