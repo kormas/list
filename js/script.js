@@ -86,18 +86,16 @@
 
     const renderButtons = () => {
         const allDone = tasks.every(task => task.done);
-        const doneAllButton = document.querySelector(".js-doneAll");
-        const toggleAllButton = document.querySelector(".js-toggleAll");
-
-        if (allDone) {
-            doneAllButton.setAttribute("disabled", "true");
-            doneAllButton.classList.add("flex__button--disabled");
-        } else {
-            doneAllButton.removeAttribute("disabled");
-            doneAllButton.classList.remove("flex__button--disabled");
-        }
-
-        toggleAllButton.textContent = hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone";
+        
+        const toggleAllButtonHTML = `
+            <button class="flex__button js-toggleAll">${hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+        `;
+    
+        const doneAllButtonHTML = `
+            <button class="flex__button js-doneAll ${allDone ? "flex__button--disabled" : ""}" ${allDone ? "disabled" : ""}>Ukończ wszystkie</button>
+        `;
+    
+        document.querySelector(".js-buttonsContainer").innerHTML = toggleAllButtonHTML + doneAllButtonHTML;
     };
 
     const markAllTasksDone = () => {
@@ -108,13 +106,13 @@
     const bindButtonsEvents = () => {
         const doneAllButton = document.querySelector(".js-doneAll");
         const toggleAllButton = document.querySelector(".js-toggleAll");
-    
+        
         doneAllButton.addEventListener("click", () => {
             if (!doneAllButton.hasAttribute("disabled")) {
                 markAllTasksDone();
             }
         });
-    
+        
         toggleAllButton.addEventListener("click", () => {
             hideCompletedTasks = !hideCompletedTasks;
             render();
