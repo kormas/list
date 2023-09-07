@@ -100,13 +100,14 @@
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
         const newTaskElement = document.querySelector(".js-newTask");
 
+        newTaskElement.value = "";
+        newTaskElement.focus();
+
         if (newTaskContent === "") {
             return;
         }
 
         addNewTask(newTaskContent);
-        newTaskElement.value = "";
-        newTaskElement.focus();
     };
 
     const init = () => {
