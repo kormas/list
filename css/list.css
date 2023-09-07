@@ -72,3 +72,7 @@
 .list__content--done {
   text-decoration: line-through;
 }
+
+.list__block--hidden {
+  display: none;
+}

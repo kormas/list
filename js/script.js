@@ -10,6 +10,8 @@
         },
     ];
 
+    let hideCompletedTasks = false;
+    
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
@@ -59,7 +61,7 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class="list__block">
+                <li class="list__block ${task.done && hideCompletedTasks ? "list__block--hidden" : ""}">
                     <div class="list__button">
                         <p class="list__leftParagraph">
                             <button class="list__markButton js-done">${task.done ? "✓" : ""}</button>
@@ -85,6 +87,7 @@
     const renderButtons = () => {
         const allDone = tasks.every(task => task.done);
         const doneAllButton = document.querySelector(".js-doneAll");
+        const toggleAllButton = document.querySelector(".js-toggleAll");
 
         if (allDone) {
             doneAllButton.setAttribute("disabled", "true");
@@ -93,6 +96,8 @@
             doneAllButton.removeAttribute("disabled");
             doneAllButton.classList.remove("flex__button--disabled");
         }
+
+        toggleAllButton.textContent = hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone";
     };
 
     const markAllTasksDone = () => {
@@ -102,10 +107,17 @@
 
     const bindButtonsEvents = () => {
         const doneAllButton = document.querySelector(".js-doneAll");
+        const toggleAllButton = document.querySelector(".js-toggleAll");
+    
         doneAllButton.addEventListener("click", () => {
             if (!doneAllButton.hasAttribute("disabled")) {
                 markAllTasksDone();
             }
+        });
+    
+        toggleAllButton.addEventListener("click", () => {
+            hideCompletedTasks = !hideCompletedTasks;
+            render();
         });
     };
 
