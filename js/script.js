@@ -82,17 +82,40 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
-    // const renderButtons = () => {};
+    const renderButtons = () => {
+        const allDone = tasks.every(task => task.done);
+        const doneAllButton = document.querySelector(".js-doneAll");
 
-    // const bindButtonsEvents = () => {};
+        if (allDone) {
+            doneAllButton.setAttribute("disabled", "true");
+            doneAllButton.classList.add("flex__button--disabled");
+        } else {
+            doneAllButton.removeAttribute("disabled");
+            doneAllButton.classList.remove("flex__button--disabled");
+        }
+    };
+
+    const markAllTasksDone = () => {
+        tasks = tasks.map(task => ({ ...task, done: true }));
+        render();
+    };
+
+    const bindButtonsEvents = () => {
+        const doneAllButton = document.querySelector(".js-doneAll");
+        doneAllButton.addEventListener("click", () => {
+            if (!doneAllButton.hasAttribute("disabled")) {
+                markAllTasksDone();
+            }
+        });
+    };
 
     const render = () => {
-       renderTasks();
-    //    renderButtons();
+        renderTasks();
+        renderButtons();
 
-       bindRemoveEvents();
-       bindToggleDoneEvents();
-    //    bindButtonsEvents();
+        bindRemoveEvents();
+        bindToggleDoneEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {

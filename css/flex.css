@@ -34,3 +34,8 @@
 .flex__button--hidden {
     visibility: hidden;
 }
+
+.flex__button--disabled {
+    color: gray;
+    cursor: not-allowed;
+}
