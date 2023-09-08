@@ -85,6 +85,12 @@
     };
 
     const renderButtons = () => {
+
+        if (tasks.length === 0) {
+            document.querySelector(".js-buttonsContainer").innerHTML = "";
+            return;
+        }
+
         const allDone = tasks.every(task => task.done);
         
         const toggleAllButtonHTML = `
