@@ -29,13 +29,19 @@
     background: #ffffff;
     border: none;
     outline: none;
-    color: teal;
+    color: hsl(180, 100%, 25%);
     cursor: pointer;
     height: 100%;
+    transition: 0.2s;
 }
 
-.flex__button--hidden {
-    visibility: hidden;
+.flex__button:hover {
+    color: hsl(180, 100%, 30%);
+}
+
+.flex__button:active {
+    color: hsl(180, 100%, 35%);
+    border: 2px solid;
 }
 
 .flex__button--disabled {

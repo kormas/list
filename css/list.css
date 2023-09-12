@@ -27,7 +27,7 @@
 .list__markButton {
   width: 30px;
   height: 30px;
-  background-color: hsl(120, 100%, 40%);
+  background-color: hsl(120, 100%, 30%);
   border-style: solid;
   border-width: 3px;
   display: flex;
@@ -36,12 +36,21 @@
   font-size: 20px;
   color: white;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.list__markButton:hover {
+  background-color: hsl(120, 100%, 35%);
+}
+
+.list__markButton:active {
+  background-color: hsl(120, 100%, 40%);
 }
 
 .list__binButton {
   width: 30px;
   height: 30px;
-  background-color: red;
+  background-color: hsl(0, 100%, 45%);
   border-style: solid;
   border-width: 3px;
   display: flex;
@@ -50,6 +59,15 @@
   font-size: 14px;
   cursor: pointer;
   flex-shrink: 0;
+  transition: 0.2s;
+}
+
+.list__binButton:hover {
+  background-color: hsl(0, 100%, 55%);
+}
+
+.list__binButton:active {
+  background-color: hsl(0, 100%, 65%);
 }
 
 .list__leftParagraph {

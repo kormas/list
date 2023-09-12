@@ -15,19 +15,21 @@
 
 .form__addTaskButton {
     flex-basis: 200px;
-    background-color: teal;
+    background-color: hsl(180, 100%, 25%);
     color: white;
     padding: 10px 10px;
     margin: 0 20px;
     border: none;
     cursor: pointer;
+    transition: 1s;
 }
 
-.form__addButton:hover {
+.form__addTaskButton:hover {
     background-color: hsl(180, 100%, 30%);
+    transform: scale(1.2);
 }
 
-.form__addButton:active {
+.form__addTaskButton:active {
     background-color: hsl(180, 100%, 35%);
 }
 
