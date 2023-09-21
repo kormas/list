@@ -1,5 +1,5 @@
 # task list
-![task list]()
+![task list](https://raw.githubusercontent.com/kormas/task-list/main/images/task-list.gif)
 ## demo
 https://kormas.github.io/list/
 
