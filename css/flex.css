@@ -48,3 +48,11 @@
     color: gray;
     cursor: not-allowed;
 }
+
+@media (max-width: 767px) {
+    .flex__header {
+        padding: 0 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
