@@ -14,5 +14,5 @@ The list allows you to:
 - BEM
 - HTML
 - CSS
-* Flexbox
+- Flexbox
 - JavaScript
