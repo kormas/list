@@ -47,4 +47,8 @@
         flex-basis: 100%;
         margin: 5px 20px;
     }
+
+    .form__addTaskButton:hover {
+        transform: scaleY(1.2);
+    }
 }
