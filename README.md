@@ -4,10 +4,10 @@
 https://kormas.github.io/task-list/
 
 ## description
-The list allows you to:
-- create new tasks
-- checkmark tasks
-- delete tasks
+The task list provided here allows you to:
+- writing out new tasks
+- checkmarking chosen tasks
+- deleting chosen tasks
 
 
 ## technologies
