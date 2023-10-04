@@ -28,8 +28,6 @@
   width: 30px;
   height: 30px;
   background-color: hsl(120, 100%, 30%);
-  border-style: solid;
-  border-width: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,8 +49,6 @@
   width: 30px;
   height: 30px;
   background-color: hsl(0, 100%, 45%);
-  border-style: solid;
-  border-width: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
