@@ -29,7 +29,7 @@
 }
 
 .flex__button {
-    padding: 0 30px;
+    padding: 10px 30px;
     background: #ffffff;
     border: none;
     outline: none;
@@ -54,9 +54,16 @@
 }
 
 @media (max-width: 767px) {
-    .flex__header {
-        padding: 0 10px;
-        font-size: 12px;
-        text-align: center;
+    .flex__block {
+        flex-direction: column;
+    }
+
+    .flex__buttonsContainer {
+        flex-wrap: wrap;
+    }
+
+    .flex__button {
+        flex-basis: 60%;
+        flex-grow: 1;
     }
 }
