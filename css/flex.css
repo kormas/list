@@ -59,11 +59,6 @@
     }
 
     .flex__buttonsContainer {
-        flex-wrap: wrap;
-    }
-
-    .flex__button {
-        flex-basis: 60%;
-        flex-grow: 1;
+        flex-direction: column;
     }
 }
