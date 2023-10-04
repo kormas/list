@@ -14,7 +14,6 @@
 
 .flex__block {
     display: flex;
-    flex-wrap: nowrap;
     margin: 0 0 2px;
 }
 
@@ -30,6 +29,7 @@
 }
 
 .flex__button {
+    padding: 0 30px;
     background: #ffffff;
     border: none;
     outline: none;
