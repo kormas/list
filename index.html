@@ -21,27 +21,29 @@
 
 <body class="body">
     <div class="flex">
-        <div class="flex__container">
+        <article class="flex__article">
             <h1>Lista Zadań</h1>
-            <div class="flex__header">
-                <h2>Dodaj nowe zadanie</h2>
-            </div>
-            <form class="form js-form">
-                <input class="form__input js-newTask" name="tasks" placeholder="Co jest do zrobienia?" autofocus>
-                <button class="form__addTaskButton">Dodaj zadanie</button>
-            </form>
-            <div class="flex__block">
+            <section class="flex__section">
                 <div class="flex__header">
-                    <h2>Lista zadań</h2>
+                    <h2>Dodaj nowe zadanie</h2>
                 </div>
-                <div class="flex__buttonsContainer js-buttonsContainer">
-                    <button class="flex__button js-toggleAll"></button>
-                    <button class="flex__button js-doneAll"></button>
+                <form class="form js-form">
+                    <input class="form__input js-newTask" name="tasks" placeholder="Co jest do zrobienia?" autofocus>
+                    <button class="form__addTaskButton">Dodaj zadanie</button>
+                </form>
+            </section>
+            <section class="flex__section">
+                <div class="flex__block">
+                    <div class="flex__header">
+                        <h2>Lista zadań</h2>
+                    </div>
+                    <div class="flex__buttonsContainer js-buttonsContainer">
+                    </div>
                 </div>
-            </div>
-            <ul class="list js-tasks">
-                <!-- list -->
-            </ul>
-        </div>
+                <ul class="list js-tasks">
+                    <!-- list -->
+                </ul>
+            </section>
+        </article>
     </div>
 </body>

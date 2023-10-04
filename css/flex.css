@@ -2,10 +2,14 @@
     margin: 0 10px;
 }
 
-.flex__container {
+.flex__article {
     max-width: 1300px;
     margin: 50px auto;
     font-family: 'Open Sans', sans-serif;
+}
+
+.flex__section {
+    margin: 10px 0;
 }
 
 .flex__block {
