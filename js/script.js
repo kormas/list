@@ -78,10 +78,12 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
+    let container = document.querySelector(".js-buttonsContainer");
+
     const renderButtons = () => {
 
         if (tasks.length === 0) {
-            document.querySelector(".js-buttonsContainer").innerHTML = "";
+            container.innerHTML = "";
             return;
         }
 
@@ -95,7 +97,7 @@
             <button class="flex__button js-doneAll ${allDone ? "flex__button--disabled" : ""}" ${allDone ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
     
-        document.querySelector(".js-buttonsContainer").innerHTML = toggleAllButtonHTML + doneAllButtonHTML;
+        container.innerHTML = toggleAllButtonHTML + doneAllButtonHTML;
     };
 
     const markAllTasksDone = () => {
