@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 767px) {
-    .flex__block {
+    .flex__container{
         flex-direction: column;
     }
 
