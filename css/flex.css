@@ -12,16 +12,15 @@
     margin: 10px 0;
 }
 
-.flex__container {
-    display: flex;
-    margin: 0 0 2px;
-}
-
 .flex__header {
     display: flex;
     flex-grow: 1;
     background-color: #ffffff;
     padding: 0 20px;
+}
+
+.flex__headerTitle {
+    flex-grow: 1;
 }
 
 .flex__buttonsContainer {
@@ -54,7 +53,7 @@
 }
 
 @media (max-width: 767px) {
-    .flex__container{
+    .flex__header{
         flex-direction: column;
     }
 
