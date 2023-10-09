@@ -79,6 +79,7 @@
 .list__content {
   display: flex;
   word-break: break-word;
+  margin: 0 10px;
 }
 
 .list__content--done {
