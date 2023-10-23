@@ -90,11 +90,11 @@
         const allDone = tasks.every(task => task.done);
         
         const toggleAllButtonHTML = `
-            <button class="button js-toggleAll">${hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+            <button class="buttons__button js-toggleAll">${hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
         `;
     
         const doneAllButtonHTML = `
-            <button class="button js-doneAll ${allDone ? "button--disabled" : ""}" ${allDone ? "disabled" : ""}>Ukończ wszystkie</button>
+            <button class="buttons__button js-doneAll ${allDone ? "button--disabled" : ""}" ${allDone ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
     
         container.innerHTML = toggleAllButtonHTML + doneAllButtonHTML;

@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.button {
+.buttons__button {
     padding: 10px 30px;
     background: #ffffff;
     border: none;
@@ -13,16 +13,16 @@
     transition: 0.2s;
 }
 
-.button:hover {
+.buttons__button:hover {
     color: hsl(180, 100%, 30%);
 }
 
-.button:active {
+.buttons__button:active {
     color: hsl(180, 100%, 35%);
     border: 2px solid;
 }
 
-.button--disabled {
+.buttons__button--disabled {
     color: gray;
     cursor: not-allowed;
 }
