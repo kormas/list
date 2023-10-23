@@ -14,41 +14,8 @@
     flex-grow: 1;
 }
 
-.section__buttonsContainer {
-    display: flex;
-}
-
-.section__button {
-    padding: 10px 30px;
-    background: #ffffff;
-    border: none;
-    outline: none;
-    color: hsl(180, 100%, 25%);
-    cursor: pointer;
-    height: 100%;
-    transition: 0.2s;
-}
-
-.section__button:hover {
-    color: hsl(180, 100%, 30%);
-}
-
-.section__button:active {
-    color: hsl(180, 100%, 35%);
-    border: 2px solid;
-}
-
-.section__button--disabled {
-    color: gray;
-    cursor: not-allowed;
-}
-
 @media (max-width: 767px) {
-    .section__header{
-        flex-direction: column;
-    }
-
-    .section__buttonsContainer {
+    .section__header {
         flex-direction: column;
     }
 }
