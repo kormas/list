@@ -90,7 +90,7 @@
         const allDone = tasks.every(task => task.done);
         
         const toggleAllButtonHTML = `
-            <button class="buttons__button js-toggleAll">${hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+            <button class="buttons__button js-toggleAll"> ${hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
         `;
     
         const doneAllButtonHTML = `
