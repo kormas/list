@@ -94,7 +94,7 @@
         `;
     
         const doneAllButtonHTML = `
-            <button class="buttons__button js-doneAll ${allDone ? "button--disabled" : ""}" ${allDone ? "disabled" : ""}>Ukończ wszystkie</button>
+            <button class="buttons__button js-doneAll ${allDone ? "buttons__button--disabled" : ""}" ${allDone ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
     
         container.innerHTML = toggleAllButtonHTML + doneAllButtonHTML;
