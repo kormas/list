@@ -22,7 +22,7 @@
     border: 2px solid;
 }
 
-.buttons__button--disabled {
+.buttons__button:disabled {
     color: gray;
     cursor: not-allowed;
 }

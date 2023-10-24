@@ -86,15 +86,13 @@
             container.innerHTML = "";
             return;
         }
-
-        const allDone = tasks.every(task => task.done);
         
         const toggleAllButtonHTML = `
             <button class="buttons__button js-toggleAll"> ${hideCompletedTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
         `;
     
         const doneAllButtonHTML = `
-            <button class="buttons__button js-doneAll ${allDone ? "buttons__button--disabled" : ""}" ${allDone ? " disabled" : ""}>Ukończ wszystkie</button>
+            <button class="buttons__button js-doneAll"${tasks.every(task => task.done) ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
     
         container.innerHTML = toggleAllButtonHTML + doneAllButtonHTML;
