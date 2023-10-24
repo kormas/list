@@ -92,7 +92,7 @@
         `;
     
         const doneAllButtonHTML = `
-            <button class="buttons__button js-doneAll"${tasks.every(task => task.done) ? "disabled" : ""}>Ukończ wszystkie</button>
+            <button class="buttons__button js-doneAll" ${tasks.every(task => task.done) ? "disabled" : ""}>Ukończ wszystkie</button>
         `;
     
         container.innerHTML = toggleAllButtonHTML + doneAllButtonHTML;
